@@ -25,27 +25,27 @@
 			</div>
 		</div>
 		<div id="reservation" class="container clearfix">
-			<div id="right-column" class="container cleafix">
+			<div id="right-column" class="row">
 				<h2 style="margin: 0;">Our Hours</h2>
 				<p class="input-contacts">We are open 7 days a week - 8 AM to 12 PM +1 101 889 9898</p>
-				<input type="text" placeholder="Name:" autofocus>
+				<input type="text" placeholder="Name:" autofocus style="margin: 0;">
 				<input type="text" placeholder="Email:">
 				<span>Check-in</span><input type="text" placeholder="24/11/2015" class="short-input cal-input">
 				<span>Check-out</span><input type="text" placeholder="26/11/2015"class="short-input">
-				<div id="left_selection">
+				<div id="left_selection" class="">
+					<span>Adults</span>
+						<select>
+							<option>0</option>
+							<option>1</option>
+							<option>2</option>
+						</select>
+					</div>
+				<div id="right_selection">
+					<span>Childred</span>
 					<select>
 						<option>0</option>
 						<option>1</option>
-						<option>2</option>
 					</select>
-					<span class="float_right">Adults</span>
-				</div>
-				<div id="right-selection">
-				<select>
-					<option>0</option>
-					<option>1</option>
-				</select>
-				<span class="float_right">Childred</span>
 				</div>
 				<form name="reser_text">
 					<textarea placeholder="Message:"></textarea>
@@ -53,9 +53,9 @@
 					<input type="reset" value="clear" class="button">
 				</form>
 			</div>
-			<h2>Reserve Your Table</h2>
 
-			<div id="left-column">
+			<div id="left-column" class="row">
+				<h2>Reserve Your Table</h2>
 				<div class="top-content">
 					<img src="./img/reserv-img.jpg" alt="">
 					<div class="text-a">

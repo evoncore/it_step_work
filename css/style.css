@@ -28,6 +28,11 @@
 a:before {
 	content:'<i class="fa fa-twitter">';
 } - не получилось
+19) Добавить шрифты
+20) Сделать иконки футера :after {
+	content: 'unicode';
+}
+
 
 */
 
@@ -74,6 +79,10 @@ p {
 a {
 	outline: none;
 	text-decoration: none;
+}
+
+::selection {
+	background: #ededed;
 }
 
 /*=== END TYPOGRAPHY GRID ===*/
@@ -283,7 +292,7 @@ a {
 }
 
 #info {
-	min-height: 279px;
+	min-height: 277px;
 }
 
 #info .c-item {
@@ -299,6 +308,10 @@ a {
 	position: relative;
 	top: -15px;
 }
+
+/* .foot-left-col {
+	min-height: 277px;
+} */
 
 .foot-left-col img {
 	float: left;
@@ -347,9 +360,6 @@ a {
 	font: bold 24px/30px 'Economica', sans-serif;
 	width: 68px;
 	text-align: center;
-	line-height: 30px;
-	display: block;
-	margin-right: 30px;
 	float: left;
 	padding: 15px;
 	height: 90px;
@@ -427,12 +437,21 @@ a {
 
 /*=== PAGE "RESERVATION" ===*/
 
+#left-column {
+	position: relative;
+	bottom: 45px;
+}
+
 #left-column img {
 	float: left;
 }
 
 #reservation h2 {
-	margin-top: 40px;
+	margin-top: 45px;
+	margin-bottom: 20px;
+}
+
+#reservation h5 {
 	margin-bottom: 20px;
 }
 
@@ -450,6 +469,7 @@ a {
 #right-column {
 	width: 365px;
 	float: right;
+	margin-bottom: 45px;
 }
 
 #right-column select {
@@ -471,18 +491,17 @@ a {
 	text-align: center;
 }
 
-#right-column .left_selection {
+#right-column #left_selection {
+	min-width: 150px;
+	height: 30px;
 	float: left;
-	width: 150px;
-	height: 30px;
 }
 
-#right-column .right_selection {
+#right-column #right_selection {
+	min-width: 150px;
+	height: 30px;
 	float: right;
-	width: 150px;
-	height: 30px;
 }
-
 
 input {
 	margin-top: 15px;
