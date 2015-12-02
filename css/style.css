@@ -84,7 +84,7 @@ a {
 
 .container {width: 1170px; margin: 0 auto;}
 
-.row {margin-top: 45px;}
+.row {padding-top: 45px;} /* padding, no margin - coz margin + margin = margin(1) */
 
 .content {margin-left: -30px;} /* for blocks align */
 
@@ -191,22 +191,6 @@ a {
 	float: left;
 }
 
-/* BACKGROUND IMAGES FOR SOURCES */
-
-#src-items .left .src-item:first-child {background: url(../img/top-imga1.jpg);}
-
-#src-items .left .src-item:last-child {background: url(../img/top-imga2.jpg);}
-
-#src-items .center .src-item:first-child {background: url(../img/top-imgb1.jpg);}
-
-#src-items .center .src-item:last-child {background: url(../img/top-imgb2.jpg);}
-
-#src-items .right .src-item:first-child {background: url(../img/top-imgc1.jpg);}
-
-#src-items .right .src-item:last-child {background: url(../img/top-imgc2.jpg);}
-
-/* END BACKGROUND IMAGES */
-
 .s-item {
 	text-align: center;
 	display: inline-block;
@@ -228,46 +212,42 @@ a {
 	margin-bottom: 30px;
 }
 
-.s-item a {
-	font: bold 20px/48px 'Economica', sans-serif;
-	margin-top: 30px;
-	background: #fff;
-	line-height: 32px;
-	display: inline-block;
-}
+/* BACKGROUND IMAGES FOR SOURCES */
 
-#posts {
-	height: 320px;
-	background: #f1f0f1;
-}
+#src-items .left .src-item:first-child {background: url(../img/top-imga1.jpg);}
 
-#posts .container {
-	background: #f1f0f1;
-}
+#src-items .left .src-item:last-child {background: url(../img/top-imga2.jpg);}
+
+#src-items .center .src-item:first-child {background: url(../img/top-imgb1.jpg);}
+
+#src-items .center .src-item:last-child {background: url(../img/top-imgb2.jpg);}
+
+#src-items .right .src-item:first-child {background: url(../img/top-imgc1.jpg);}
+
+#src-items .right .src-item:last-child {background: url(../img/top-imgc2.jpg);}
+
+/* END BACKGROUND IMAGES */
 
 #posts p {
 	margin-top: 20px;
 }
 
-#posts a {
-	font: bold 20px/48px 'Economica', sans-serif;
-	line-height: 32px;
-	display: inline-block;
-}
-
-#mid-left-col {
+#posts .col {
 	float: left;
-	width: 490px;
-	padding: 35px 0;
-	margin-left: 100px;
-	display: block;
+	padding: 50px 0;
+	background: #f1f0f1;
 }
 
-#mid-right-col {
-	float: right;
-	padding: 35px 0;
+#posts .col:nth-child(odd) { /* to copy blocks */
+	padding-right: 20px;
+	padding-left: 100px;
 	width: 470px;
-	margin-right: 75px;
+}
+
+#posts .col:nth-child(even) { /* to copy blocks */
+	padding-right: 135px;
+	padding-left: 5px;
+	width: 440px;
 }
 
 #catalog {
@@ -275,20 +255,17 @@ a {
 	margin-top: 43px;
 }
 
-#catalog h2 {
-	margin-bottom: 40px;
-}
-
 #catalog img {
 	display: block;
 }
-
 
 .c-item {
 	width: 370px;
 	float: left;
 	margin-left: 30px;
+	margin-bottom: 45px;
 }
+
 .c-item a {
 	display: block;
 }
@@ -305,20 +282,19 @@ a {
 	box-shadow: inset 0 0 10px rgba(0,0,0,1);
 }
 
-#bottom-footer {
-	height: 279px;
-	margin-top: 97px;
+#info {
+	min-height: 279px;
 }
 
-#bottom-footer .c-item {
-	height: 278px;
+#info .c-item {
+	margin-bottom: 45px;
 }
 
-#bottom-footer .foot-center-col h2 {
+#info .foot-center-col h2 {
 	margin-bottom: 20px;
 }
 
-#apostroph {
+#apostroph { /******** NEED FIX ********/
 	float: right;
 	position: relative;
 	top: -15px;
@@ -352,11 +328,11 @@ a {
 	width: 135px;
 }
 
-#more-info {
+#more-info { /******** NEED FIX ********/
 	text-align: right;
 }
 
-.foot-center-col .element-box {
+.foot-center-col .info-item {
 	height: 105px;
 	width: 370px;
 }
@@ -422,7 +398,7 @@ a {
 	font: bold 30px/48px 'Economica', sans-serif;
 }
 
-.foot-right-col .element-box {
+.foot-right-col .info-item {
 	margin-top: 13px;
 }
 
@@ -811,11 +787,10 @@ td:last-child {
 	float: right;
 }
 
-#anchor {
+#anchor { /******** NEED FIX (if we remove this item - we will be big padding. its need to fix )********/
 	position: fixed;
 	right: 200px;
 	bottom: 120px;
-	z-index: 0;
 }
 
 /*=== END FOOTER ===*/
