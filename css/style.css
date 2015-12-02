@@ -3,6 +3,8 @@
 @import url(https://fonts.googleapis.com/css?family=Economica:400,700); /* font-family: 'Economica' */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700); /* font-family: 'Open Sans'; */
 
+/*=== END IMPORT ===*/
+
 /* Задачи:
 
 1) Сделать типографию + ссылке в топовых постах +
@@ -76,31 +78,51 @@ a {
 
 /*=== END TYPOGRAPHY GRID ===*/
 
-/*=== END IMPORT ===*/
-
-.clearfix {
-	content: '';
-	display: block;
-	clear: both;
-}
-
-
 /*=== CUSTOM GRID ===*/
 
-.row {
-	padding-top: 45px;
+.clearfix {content: ''; display: block; clear: both;}
+
+.container {width: 1170px; margin: 0 auto;}
+
+.row {margin-top: 45px;}
+
+.content {margin-left: -30px;} /* for blocks align */
+
+.button {
+	border: 1px solid #9b9b9b;
+	font: bold 20px/48px 'Economica', sans-serif;
+	margin-top: 30px;
+	width: 97px;
+	height: 36px;
+	color: #969696;
+	line-height: 32px;
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.button:hover {
+	color: #fff;
+	background: #2e2d2d;
+	border: 1px solid #2e2d2d;
 }
 
 /*=== END CUSTOM GRID ===*/
 
-.container {
-	width: 1170px;
-	margin: 0 auto;
-}
-
 /*=== HEADER ===*/
 
-#wrapper {
+.wrapper {
 	height: 100%;
 }
 
@@ -119,7 +141,7 @@ a {
 	text-transform: lowercase;
 }
 
-#navigation ul {
+#navigation {
 	margin-top: 60px;
 }
 
@@ -141,28 +163,23 @@ a {
 
 /*=== PAGE "HOME" ===*/
 
-.content {
-	margin-left: -30px;
-}
-
-#top-menu {
-	margin-top: 50px;
+#sources {
 	height: 610px;
 }
 
-.box {
+.src-item {
 	height: 305px;
 	width: 370px;
 	background: #f1f0f1;
 	margin-left: 30px;
 }
 
-.box h1 {
+.src-item h1 {
 	text-align: center;
 	padding-top: 125px;
 }
 
-.box a {
+.src-item a {
 	font: 20px/48px 'Economica', sans-serif;
 	color: #fff;
 	margin: 15px 170px;
@@ -170,43 +187,31 @@ a {
 	text-transform: lowercase;
 }
 
-#catalog .col {
+#src-items .col {
 	float: left;
 }
 
-#catalog .left .box:first-child {
-	background: url(../img/top-imga1.jpg);
-}
+/* BACKGROUND IMAGES FOR SOURCES */
 
-#catalog .left .box:last-child {
-	background: url(../img/top-imga2.jpg);
-}
+#src-items .left .src-item:first-child {background: url(../img/top-imga1.jpg);}
 
-#catalog .center .box:first-child {
-	background: url(../img/top-imgb1.jpg);
-}
+#src-items .left .src-item:last-child {background: url(../img/top-imga2.jpg);}
 
-#catalog .center .box:last-child {
-	background: url(../img/top-imgb2.jpg);
-}
+#src-items .center .src-item:first-child {background: url(../img/top-imgb1.jpg);}
 
-#catalog .right .box:first-child {
-	background: url(../img/top-imgc1.jpg);
-}
+#src-items .center .src-item:last-child {background: url(../img/top-imgb2.jpg);}
 
-#catalog .right .box:last-child {
-	background: url(../img/top-imgc2.jpg);
-}
+#src-items .right .src-item:first-child {background: url(../img/top-imgc1.jpg);}
 
-#middle-menu {
-	margin-top: 30px;
-}
+#src-items .right .src-item:last-child {background: url(../img/top-imgc2.jpg);}
 
-.middle-box {
+/* END BACKGROUND IMAGES */
+
+.s-item {
 	text-align: center;
 	display: inline-block;
 	float: left;
-	height: 355px;
+	height: 330px;
 	width: 370px;
 	margin-left: 30px;
 }
@@ -219,11 +224,11 @@ a {
 	text-align: center;
 	line-height: 140px;
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 15px;
 	margin-bottom: 30px;
 }
 
-.middle-box a {
+.s-item a {
 	font: bold 20px/48px 'Economica', sans-serif;
 	margin-top: 30px;
 	background: #fff;
@@ -231,21 +236,20 @@ a {
 	display: inline-block;
 }
 
-#middle-footer {
+#posts {
 	height: 320px;
 	background: #f1f0f1;
-	margin-top: 20px;
 }
 
-#middle-footer .container {
+#posts .container {
 	background: #f1f0f1;
 }
 
-#middle-footer p {
+#posts p {
 	margin-top: 20px;
 }
 
-#middle-footer a {
+#posts a {
 	font: bold 20px/48px 'Economica', sans-serif;
 	line-height: 32px;
 	display: inline-block;
@@ -266,30 +270,30 @@ a {
 	margin-right: 75px;
 }
 
-#bottom-menu {
+#catalog {
 	height: 385px;
 	margin-top: 43px;
 }
 
-#bottom-menu h2 {
+#catalog h2 {
 	margin-bottom: 40px;
 }
 
-#bottom-menu img {
+#catalog img {
 	display: block;
 }
 
 
-.bottom-box {
+.c-item {
 	width: 370px;
 	float: left;
 	margin-left: 30px;
 }
-.bottom-box a {
+.c-item a {
 	display: block;
 }
 
-#add {
+.add-button {
 	width: 35px;
 	height: 35px;
 	background: url(../img/add-icon.png) no-repeat center, #2e2d2d;
@@ -297,7 +301,7 @@ a {
 	margin-top: 30px;
 }
 
-#add:active {
+.add-button:active {
 	box-shadow: inset 0 0 10px rgba(0,0,0,1);
 }
 
@@ -306,7 +310,7 @@ a {
 	margin-top: 97px;
 }
 
-#bottom-footer .bottom-box {
+#bottom-footer .c-item {
 	height: 278px;
 }
 
@@ -427,46 +431,16 @@ a {
 
 /*=== PAGE "MENU" ===*/
 
-.box-2 {
+.menu-item {
 	height: 490px;
 	width: 370px;
 	background: #f1f0f1;
 	float: left;
-	margin: 30px 0 0px 30px;
+	margin: 0 0 30px 30px;
 }
 
-.box-text {
+.menu-text {
 	margin: 25px;
-}
-
-.button {
-	border: 1px solid #9b9b9b;
-	font: bold 20px/48px 'Economica', sans-serif;
-	margin-top: 30px;
-	width: 97px;
-	height: 36px;
-	color: #969696;
-	line-height: 32px;
-	vertical-align: middle;
-	display: inline-block;
-	text-align: center;
-	cursor: pointer;
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-
-	-webkit-transition: .2s;
-	-moz-transition: .2s;
-	-o-transition: .2s;
-	transition: .2s;
-}
-
-.button:hover {
-	color: #fff;
-	background: #2e2d2d;
-	border: 1px solid #2e2d2d;
 }
 
 /*=== END PAGE "MENU" ===*/
@@ -795,9 +769,8 @@ td:last-child {
 #footer {
 	background: #adacac;
 	height: 140px;
-	bottom: 0;
 	position: relative;
-	top: 35px;
+	bottom: 0;
 }
 
 #copyright b {
