@@ -11,23 +11,23 @@
 2) Оптимизировать код: прописать префиксы, поудалять ненужные параметры
 3) Пофиксить нижний блок после картинок: добавить иконку к ссылке "more testimonials" +
 4) Решить что-то со шрифтами +
-5) Подобавлять ко всем путям изображений в HTML './'
+5) Подобавлять ко всем путям изображений в HTML './' - не нужно
 6) Сделать нормально иконку-ссылку в нижем меню (стрелочка) +
-7) Сделать перенос строки для цифр в нижнем центральном меню (black box) - padding
+7) Сделать перенос строки для цифр в нижнем центральном меню (black box) - padding +
 8) Пересохранить все изображения в PNG в черезстрочном формате
-9) Сделать нормальный скелет header, section, footer
-10) Убрать высоту у страниц
-11) Изменить описание плиток в разделе menu 
+9) Сделать нормальный скелет header, section, footer - пока не нужно
+10) Убрать высоту у страниц +
+11) Изменить описание плиток в разделе menu !important
 12) Сделать якорь (arrow) адаптивным
-13) Почти полностью переверстать первую страницу
-14) Сделать сетку
-15) Исправить transition во всех hover
-16) Сделать названия под сетку
+13) Почти полностью переверстать первую страницу +
+14) Сделать сетку +-
+15) Исправить transition во всех hover +
+16) Сделать названия под сетку - не нужно
 17) Geolocation iframe code +
 18) Добавить иконку таким типом, где это нужно:
 a:before {
 	content:'<i class="fa fa-twitter">';
-}
+} - не получилось
 
 */
 
@@ -212,7 +212,7 @@ a {
 	margin-bottom: 30px;
 }
 
-/* BACKGROUND IMAGES FOR SOURCES */
+/* BACKGROUND IMAGES FOR BLOCK "sources" */
 
 #src-items .left .src-item:first-child {background: url(../img/top-imga1.jpg);}
 
@@ -316,11 +316,15 @@ a {
 	text-transform: lowercase;
 	font: bold 20px/48px 'Economica', sans-serif;
 	float: right;
+
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
 }
 
 .foot-left-col a:hover {
 	color: #2e2d2d;
-	transition: .2s;
 }
 
 .foot-left-col a {
